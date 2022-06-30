@@ -5,79 +5,51 @@
 `|⬡════════════════════════════════════════════════════════════|▷   ᴘᴏᴡᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋʀᴀᴋɪɴᴢʟᴀʙ™  ◁|════════════════════════════════════════════════════════════⬡|`;
 require("./𝕷𝖆ყO𝖚𝖙");
 exports.ᴘᴏᴡᴇʀ = async (ᴋᴜɴᴀɪ, Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊) => {
-if (
-Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.message &&
-Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.isGroup &&
-!Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.fromMe &&
-!Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.isSenderTUF
-) {
-let FetchCurrentGroupLink = await ᴋᴜɴᴀɪ.groupInviteCode(Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.chatID);
-let GroupLinkRegex = /Fox.whatsapp.com\/([0-9A-Za-z]{20,24})/i;
-let isGroupLink = GroupLinkRegex.exec(Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.body);
-let PresentGroupLink = new RegExp(
-`https://chat.whatsapp.com/${FetchCurrentGroupLink}`,
-"i"
-);
-let isCurrentGroupLink = PresentGroupLink.test(Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.body);
-if (isGroupLink && !isCurrentGroupLink) {
-await Image_Button(
-ᴋᴜɴᴀɪ,
-Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊,
-A𝖗𝖌𝖘,
-"./Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊👗𝕯𝖗𝖊𝖘𝖘/Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊_Orange.png",
-`╔◇═══════════════◇╗
-┊ 𝐊𝐫𝐲𝐙𝐞𝐧❌𝐀𝐧𝐭𝐢-𝐋𝐢𝐧𝐤
-┊    𝐌𝐞𝐜𝐡𝐚𝐧𝐢𝐬𝐦
-╚◇═══════════════◇╝
-
-🤖𝐕𝐚𝐥𝐤𝐲𝐫𝐢𝐞: Kicked! 🎊One Less MoFo🎊
-❗𝗥𝗲𝗮𝘀𝗼𝗻: Sent some type of Link in this Group!
-⚠️𝗠𝗲𝘀𝘀𝗮𝗴𝗲: ${Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.body}
-
-
-💀𝗧𝗿𝗶𝗴𝗴𝗲𝗿𝗲𝗱:
-🐾 WWW
-🐾 Discord Link
-🐾 Telegram Link
-🐾 Whatspp Invite Link`
-);
-return await ᴋᴜɴᴀɪ
-.groupParticipantsUpdate(Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.chatID, [Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.sender], "remove")
-.catch((e) => Caught(ᴋᴜɴᴀɪ, Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊, e));
-} else if (
-Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.body.includes("https://t.me/") &&
-Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.body.includes("discord.gg") &&
-Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.body.includes("discord.com") &&
-Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.body.includes("/t.me/") &&
-Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.body.includes("wa.me/") &&
-Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.body.includes("www.")
-) {
-await Image_Button(
-ᴋᴜɴᴀɪ,
-Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊,
-A𝖗𝖌𝖘,
-"./Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊👗𝕯𝖗𝖊𝖘𝖘/Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊_Orange.png",
-`╔◇═══════════════◇╗
-┊ 𝐊𝐫𝐲𝐙𝐞𝐧❌𝐀𝐧𝐭𝐢-𝐋𝐢𝐧𝐤
-┊    𝐌𝐞𝐜𝐡𝐚𝐧𝐢𝐬𝐦
-╚◇═══════════════◇╝
-
-🤖𝐕𝐚𝐥𝐤𝐲𝐫𝐢𝐞: Kicked! 🎊One Less MoFo🎊
-❗𝗥𝗲𝗮𝘀𝗼𝗻: Sent some type of Link in this Group!
-⚠️𝗠𝗲𝘀𝘀𝗮𝗴𝗲: ${Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.body}
-
-
-💀𝗧𝗿𝗶𝗴𝗴𝗲𝗿𝗲𝗱:
-🐾 WWW
-🐾 Discord Link
-🐾 Telegram Link
-🐾 Whatspp Invite Link`
-);
-return await ᴋᴜɴᴀɪ
-.groupParticipantsUpdate(Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.chatID, [Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.sender], "remove")
-.catch((e) => Caught(ᴋᴜɴᴀɪ, Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊, e));
-}
-}
+  if (
+    Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.message &&
+    Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.isGroup &&
+    !Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.fromMe &&
+    !Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.isSenderTUF
+  ) {
+    let FetchCurrentGroupLink = await ᴋᴜɴᴀɪ.groupInviteCode(Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.chatID);
+    let GroupLinkRegex = /Fox.whatsapp.com\/([0-9A-Za-z]{20,24})/i;
+    let isGroupLink = GroupLinkRegex.exec(Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.body);
+    let PresentGroupLink = new RegExp(
+      `https://chat.whatsapp.com/${FetchCurrentGroupLink}`,
+      "i"
+    );
+    let isCurrentGroupLink = PresentGroupLink.test(Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.body);
+    if (isGroupLink && !isCurrentGroupLink) {
+      await Image_Button(
+        ᴋᴜɴᴀɪ,
+        Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊,
+        A𝖗𝖌𝖘,
+        "./Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊👗𝕯𝖗𝖊𝖘𝖘/Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊_Orange.png",
+        `🤖𝐕𝐚𝐥𝐤𝐲𝐫𝐢𝐞: Kicked! 🎊One Less MoFo🎊`
+      );
+      return await ᴋᴜɴᴀɪ
+        .groupParticipantsUpdate(Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.chatID, [Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.sender], "remove")
+        .catch((e) => Caught(ᴋᴜɴᴀɪ, Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊, e));
+    } else if (
+      Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.body.includes("https://t.me/") &&
+      Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.body.includes("discord.gg") &&
+      Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.body.includes("discord.com") &&
+      Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.body.includes("/t.me/") &&
+      Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.body.includes("wa.me/") &&
+      Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.body.includes("www.")
+    ) {
+      await Image_Button(
+        ᴋᴜɴᴀɪ,
+        Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊,
+        A𝖗𝖌𝖘,
+        "./Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊👗𝕯𝖗𝖊𝖘𝖘/Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊_Orange.png",
+        `🤖𝐕𝐚𝐥𝐤𝐲𝐫𝐢𝐞: Kicked! 🎊One Less MoFo🎊`
+      );
+      return await ᴋᴜɴᴀɪ
+        .groupParticipantsUpdate(Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.chatID, [Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.sender], "remove")
+        .catch((e) => Caught(ᴋᴜɴᴀɪ, Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊, e));
+    }
+  }
 };
 `|⬡════════════════════════════════════════════════════════════|▷   ᴘᴏᴡᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋʀᴀᴋɪɴᴢʟᴀʙ™  ◁|════════════════════════════════════════════════════════════⬡|`;
 
