@@ -13,12 +13,12 @@ if (
 ) {
 let FetchCurrentGroupLink = await ᴋᴜɴᴀɪ.groupInviteCode(Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.chatID);
 let GroupLinkRegex = /Fox.whatsapp.com\/([0-9A-Za-z]{20,24})/i;
-let isGroupLink = GroupLinkRegex.exec(Figure);
+let isGroupLink = GroupLinkRegex.exec(Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.body);
 let PresentGroupLink = new RegExp(
 `https://chat.whatsapp.com/${FetchCurrentGroupLink}`,
 "i"
 );
-let isCurrentGroupLink = PresentGroupLink.test(Figure);
+let isCurrentGroupLink = PresentGroupLink.test(Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.body);
 if (isGroupLink && !isCurrentGroupLink) {
 await Image_Button(
 ᴋᴜɴᴀɪ,
@@ -32,7 +32,7 @@ A𝖗𝖌𝖘,
 
 🤖𝐕𝐚𝐥𝐤𝐲𝐫𝐢𝐞: Kicked! 🎊One Less MoFo🎊
 ❗𝗥𝗲𝗮𝘀𝗼𝗻: Sent some type of Link in this Group!
-⚠️𝗠𝗲𝘀𝘀𝗮𝗴𝗲: ${Figure}
+⚠️𝗠𝗲𝘀𝘀𝗮𝗴𝗲: ${Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.body}
 
 
 💀𝗧𝗿𝗶𝗴𝗴𝗲𝗿𝗲𝗱:
@@ -45,12 +45,12 @@ return await ᴋᴜɴᴀɪ
 .groupParticipantsUpdate(Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.chatID, [Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.sender], "remove")
 .catch((e) => Caught(ᴋᴜɴᴀɪ, Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊, e));
 } else if (
-Figure.includes("https://t.me/") &&
-Figure.includes("discord.gg") &&
-Figure.includes("discord.com") &&
-Figure.includes("/t.me/") &&
-Figure.includes("wa.me/") &&
-Figure.includes("www.")
+Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.body.includes("https://t.me/") &&
+Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.body.includes("discord.gg") &&
+Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.body.includes("discord.com") &&
+Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.body.includes("/t.me/") &&
+Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.body.includes("wa.me/") &&
+Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.body.includes("www.")
 ) {
 await Image_Button(
 ᴋᴜɴᴀɪ,
@@ -64,7 +64,7 @@ A𝖗𝖌𝖘,
 
 🤖𝐕𝐚𝐥𝐤𝐲𝐫𝐢𝐞: Kicked! 🎊One Less MoFo🎊
 ❗𝗥𝗲𝗮𝘀𝗼𝗻: Sent some type of Link in this Group!
-⚠️𝗠𝗲𝘀𝘀𝗮𝗴𝗲: ${Figure}
+⚠️𝗠𝗲𝘀𝘀𝗮𝗴𝗲: ${Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.body}
 
 
 💀𝗧𝗿𝗶𝗴𝗴𝗲𝗿𝗲𝗱:
