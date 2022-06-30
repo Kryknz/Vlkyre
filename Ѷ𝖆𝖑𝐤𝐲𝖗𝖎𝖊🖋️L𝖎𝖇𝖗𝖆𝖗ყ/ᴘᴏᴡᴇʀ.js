@@ -5,11 +5,19 @@
 `|⬡════════════════════════════════════════════════════════════|▷   ᴘᴏᴡᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋʀᴀᴋɪɴᴢʟᴀʙ™  ◁|════════════════════════════════════════════════════════════⬡|`;
 require("./𝕷𝖆ყO𝖚𝖙");
 exports.ᴘᴏᴡᴇʀ = async (ᴋᴜɴᴀɪ, Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊) => {
-if (Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.isGroup && !Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.fromMe && !Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.isSenderTUF) {
+if (
+Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.message &&
+Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.isGroup &&
+!Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.fromMe &&
+!Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.isSenderTUF
+) {
 let FetchCurrentGroupLink = await ᴋᴜɴᴀɪ.groupInviteCode(Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.chatID);
 let GroupLinkRegex = /Fox.whatsapp.com\/([0-9A-Za-z]{20,24})/i;
 let isGroupLink = GroupLinkRegex.exec(Figure);
-let PresentGroupLink = new RegExp(`https://chat.whatsapp.com/${FetchCurrentGroupLink}`,"i");
+let PresentGroupLink = new RegExp(
+`https://chat.whatsapp.com/${FetchCurrentGroupLink}`,
+"i"
+);
 let isCurrentGroupLink = PresentGroupLink.test(Figure);
 if (isGroupLink && !isCurrentGroupLink) {
 await Image_Button(
@@ -33,7 +41,9 @@ A𝖗𝖌𝖘,
 🐾 Telegram Link
 🐾 Whatspp Invite Link`
 );
-return await ᴋᴜɴᴀɪ.groupParticipantsUpdate(Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.chatID, [Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.sender],"remove").catch((e) => Caught(ᴋᴜɴᴀɪ, Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊, e));
+return await ᴋᴜɴᴀɪ
+.groupParticipantsUpdate(Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.chatID, [Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.sender], "remove")
+.catch((e) => Caught(ᴋᴜɴᴀɪ, Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊, e));
 } else if (
 Figure.includes("https://t.me/") &&
 Figure.includes("discord.gg") &&
@@ -63,8 +73,10 @@ A𝖗𝖌𝖘,
 🐾 Telegram Link
 🐾 Whatspp Invite Link`
 );
-return await ᴋᴜɴᴀɪ.groupParticipantsUpdate(Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.chatID, [Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.sender],"remove").catch((e) => Caught(ᴋᴜɴᴀɪ, Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊, e));
-} 
+return await ᴋᴜɴᴀɪ
+.groupParticipantsUpdate(Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.chatID, [Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊.sender], "remove")
+.catch((e) => Caught(ᴋᴜɴᴀɪ, Ѷ𝖆𝖑𝐤𝐲𝖗𝖎𝖊, e));
+}
 }
 };
 `|⬡════════════════════════════════════════════════════════════|▷   ᴘᴏᴡᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋʀᴀᴋɪɴᴢʟᴀʙ™  ◁|════════════════════════════════════════════════════════════⬡|`;
